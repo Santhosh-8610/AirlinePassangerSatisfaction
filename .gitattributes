@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+large_file.pkl filter=lfs diff=lfs merge=lfs -text
+AirlinePassenger.pkl filter=lfs diff=lfs merge=lfs -text
