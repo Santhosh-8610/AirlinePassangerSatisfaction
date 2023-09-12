@@ -1,0 +1,59 @@
+body {
+    background-image: url('w14.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-link {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+
+
+#hed {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+#des {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+#btn {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+#btn:hover {
+    color: black;
+    background-color: white;
+}
+
+#conflu {
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+#footer {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}

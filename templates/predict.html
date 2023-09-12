@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+  <!-- https://cdnjs.com/libraries/font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="static/css/predict.css">
+
+  <link rel="icon" href="static/css/f.png">
+
+  <title>Index</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="static/css/f.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Airline System
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pred">Predict</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    label {
+      color: aliceblue;
+    }
+  </style>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 id="hed">Machine Learning</h1><br>
+        <p id="des">Identifying Airline passenger Satisfaction using Machine Learning</p><br>
+        <p id="des">Prediction : {% if prediction_text %} {{prediction_text}} {% endif %}</p>
+      </div>
+      <div class="col-md-5 pt-2">
+        <form action="/pred" method="post">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="text" name="age" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Flight Distance</label>
+            <input type="text" name="dist" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Inflight wifi service</label>
+            <input type="text" name="wifi" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Departure/Arrival time convenient</label>
+            <input type="text" name="arrival" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ease of Online booking</label>
+            <input type="text" name="onlinebooking" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Gate location</label>
+            <input type="text" name="location" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Food and drink</label>
+            <input type="text" name="food" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Online boarding</label>
+            <input type="text" name="onlineboarding" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Seat comfort</label>
+            <input type="text" name="seat" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Inflight entertainment</label>
+            <input type="text" name="inflightenv" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>On-board service</label>
+            <input type="text" name="onboardservice" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Leg room service</label>
+            <input type="text" name="roomservice" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Baggage handling</label>
+            <input type="text" name="handling" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Checkin service</label>
+            <input type="text" name="checkin" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Inflight service</label>
+            <input type="text" name="inflight" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Cleanliness</label>
+            <input type="text" name="cleanliness" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Departure Delay in Minutes</label>
+            <input type="text" name="delay" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Arrival Delay in Minutes</label>
+            <input type="text" name="arivaldelay" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Primary</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+
+
+
+
+  <footer class="footer bg-light ">
+
+    <!-- Copyright -->
+    <br>
+
+    <div id="footer">
+      © 2023 Copyright Airline Passenger Satisfaction System
+      <br> <br>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+  <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+  <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+  <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+</body>
+
+</html>
